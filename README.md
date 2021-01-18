@@ -18,14 +18,14 @@ Forked from the reflow oven project: [picoReflow](https://apollo.open-resource.o
 ### Подключение
 ​MAX31856 to OPi PIN 
 
-3V to Pin 17 
-GND to Pin 14 
-DO to Pin 16 
-DI to Pin 18 
-CS to Pin 10 
-CLK to Pin 12
+ * 3V to Pin 17 
+ * GND to Pin 14 
+ * DO to Pin 16 
+ * DI to Pin 18 
+ * CS to Pin 10 
+ * CLK to Pin 12
 
-реле на 25 и 26 пины
+ * реле на 25 и 26 пины
 
 ## Установка
 
@@ -76,20 +76,21 @@ If you also want to use the in-kernel SPI drivers with a MAX31855 sensor:
 ## Configuration
 
 Все параметры находятся в config.py. Скопируруйте config.py.EXAMPLE как config.py и отредактируйте.
-Однако в lib/ в нужном драйвере необходимо задать модель BOARD для OPi.GPIO:
-OPi Zero (as ZERO)
-OPi Zero Plus (as ZEROPLUS)
-OPi Zero Plus2 H3 (as ZEROPLUS2H3)
-OPi Zero Plus2 H5 (as ZEROPLUS2H5)
-OPi R1
-OPi PC & PC Plus (as PCPCPLUS)
-OPi One (as ONE)
-OPi Lite (as LITE)
-OPi PC2
-OPi Prime (as PRIME)
-OPi Lite2 (as LITE2)
-OPi One Plus (as ONEPLUS)
-OPi 3 (as THREE)
+Однако в lib/ в нужном драйвере необходимо задать модель BOARD для OPi.GPIO: 
+
+  * OPi Zero (as ZERO) 
+  * OPi Zero Plus (as ZEROPLUS) 
+  * OPi Zero Plus2 H3 (as ZEROPLUS2H3) 
+  * OPi Zero Plus2 H5 (as ZEROPLUS2H5)
+  * OPi R1
+  * OPi PC & PC Plus (as PCPCPLUS)
+  * OPi One (as ONE)
+  * OPi Lite (as LITE)
+  * OPi PC2
+  * OPi Prime (as PRIME)
+  * OPi Lite2 (as LITE2)
+  * OPi One Plus (as ONEPLUS)
+  * OPi 3 (as THREE)
 
 ## Usage
 
