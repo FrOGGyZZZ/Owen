@@ -1,0 +1,35 @@
+### BEGIN INIT INFO
+# Provides: Start kilncontroller server
+# Required-Start: $remote_fs $syslog
+# Required-Stop: $remote_fs $syslog
+# Default-Start: 2 3 4 5
+# Default-Stop: 0 1 6
+# Short-Description: Start  Kiln Controller Server
+# Description: kilncontroller On Board *Pi
+### END INIT INFO
+
+
+#! /bin/sh
+# /etc/init.d/kilncontroller
+
+
+export HOME
+KILNdHOME="/opt/owen"
+KILNd="/opt/owen/owen.py"
+case "$1" in
+    start)
+        echo "Starting kiln controller Server"
+        cd $KILNdHOME
+        python3 $KILNd  2>&1 &
+    ;;
+    stop)
+        echo "Stopping kiln controller Server"
+        reflow_PID=`ps auxwww | grep owen.py | head -1 | awk '{print $2}'`
+        kill -9 $reflow_PID
+    ;;
+    *)
+        echo "Usage: /etc/init.d/kilnd {start|stop}"
+        exit 1
+    ;;
+esac
+exit 0
